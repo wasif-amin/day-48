@@ -43,3 +43,18 @@ if grandma:
 # if grandma:
 #    grandma.click()
 
+#------- working lines 34-43 ------⬇️
+for current_product_webElement in products:
+    if "enabled" in current_product_webElement.get_attribute("class"):
+        elements.append(current_product_webElement)
+
+for element in elements:
+    price = element.text.split("\n")[1]
+    int_price = int(price)
+    if int_price == 100:
+        grandma = element
+        break
+if grandma:
+    grandma.click()
+
+
