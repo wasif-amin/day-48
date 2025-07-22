@@ -6,6 +6,7 @@ chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
 driver.get("https://en.wikipedia.org/wiki/Main_Page")
 # ------- clicking and interacting woth wikipedia ----⬇️
+
 num =  driver.find_element(By.XPATH, value='//*[@id="articlecount"]/ul/li[2]/a[1]')
 num_from_id = driver.find_element(By.ID, value="articlecount")
 portals = driver.find_element(By.LINK_TEXT, value="Content portals")
